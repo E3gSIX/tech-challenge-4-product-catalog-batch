@@ -1,1 +1,23 @@
-spring.application.name=tech-challenge-4-clientes
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    jdbcUrl: jdbc:postgresql://localhost:5432/mydb
+    username: admin
+    password: admin123!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  batch:
+    initialize-schema: always
+  sql:
+    init:
+      mode: always
+server:
+  port: 9080
+csv:
+  file:
+    filePath: C:/Users/User/Área de Trabalho/arquivos/producto.csv
+    processedDir: C:/Users/User/Área de Trabalho/arquivos/Processado
