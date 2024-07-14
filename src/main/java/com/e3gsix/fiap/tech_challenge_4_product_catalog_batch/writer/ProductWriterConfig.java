@@ -1,12 +1,10 @@
 package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.writer;
 
-import javax.sql.DataSource;
-
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
-import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
+import org.springframework.batch.item.data.MongoItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
@@ -15,12 +13,21 @@ import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProdu
 @EnableTransactionManagement
 public class ProductWriterConfig {
 
+//    @Bean
+//    public ItemWriter<DomainProduct> itemWriter(DataSource dataSource) {
+//        return new JdbcBatchItemWriterBuilder<DomainProduct>()
+//                .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
+//                .dataSource(dataSource)
+//                .sql("INSERT INTO domainproduct (code, description, price, quantity) VALUES (:code, :description, :price, :quantity)")
+//                .build();
+//    }
+    
+    
     @Bean
-    public ItemWriter<DomainProduct> itemWriter(DataSource dataSource) {
-        return new JdbcBatchItemWriterBuilder<DomainProduct>()
-                .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-                .dataSource(dataSource)
-                .sql("INSERT INTO domainproduct (code, description, price, quantity) VALUES (:code, :description, :price, :quantity)")
-                .build();
+    public ItemWriter<DomainProduct> itemWriter(MongoTemplate mongoTemplate) {
+        MongoItemWriter<DomainProduct> writer = new MongoItemWriter<>();
+        writer.setTemplate(mongoTemplate);
+        writer.setCollection("domainproduct");
+        return writer;
     }
 }

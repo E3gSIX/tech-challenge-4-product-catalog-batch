@@ -15,11 +15,26 @@ import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProdu
 @Configuration
 public class StepConfig {
 
+//    @Bean
+//    public Step step(
+//            JobRepository jobRepository, 
+//            PlatformTransactionManager transactionManager,
+//            ItemReader<DomainProduct> itemReader, 
+//            ItemWriter<DomainProduct> itemWriter,
+//            ItemProcessor<DomainProduct, DomainProduct> itemProcessor) {
+//        return new StepBuilder("step", jobRepository)
+//                .<DomainProduct, DomainProduct>chunk(10, transactionManager)
+//                .reader(itemReader)
+//                .processor(itemProcessor)
+//                .writer(itemWriter)
+//                .build();
+//    }
+    
     @Bean
     public Step step(
-            JobRepository jobRepository, 
+            JobRepository jobRepository,
             PlatformTransactionManager transactionManager,
-            ItemReader<DomainProduct> itemReader, 
+            ItemReader<DomainProduct> itemReader,
             ItemWriter<DomainProduct> itemWriter,
             ItemProcessor<DomainProduct, DomainProduct> itemProcessor) {
         return new StepBuilder("step", jobRepository)
@@ -30,3 +45,4 @@ public class StepConfig {
                 .build();
     }
 }
+
