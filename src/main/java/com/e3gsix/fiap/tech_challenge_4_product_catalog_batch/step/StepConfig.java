@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.step;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.step;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.repository.JobRepository;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import com.e3gsix.fiap.tech_challenge_4_clientes.domain.DomainProduct;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
 
 @Configuration
 public class StepConfig {

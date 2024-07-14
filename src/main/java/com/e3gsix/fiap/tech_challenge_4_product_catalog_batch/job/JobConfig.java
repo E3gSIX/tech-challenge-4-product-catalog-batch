@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.job;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -8,7 +8,7 @@ import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.e3gsix.fiap.tech_challenge_4_clientes.listener.JobCompletionNotificationListener;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.listener.JobCompletionNotificationListener;
 
 @Configuration
 public class JobConfig {

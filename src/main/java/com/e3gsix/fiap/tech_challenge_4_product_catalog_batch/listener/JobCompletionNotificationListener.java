@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.listener;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.listener;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

@@ -1,8 +1,8 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.mapper.impl;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.mapper.impl;
 
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 
-import com.e3gsix.fiap.tech_challenge_4_clientes.mapper.FieldSetMapperConverter;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.mapper.FieldSetMapperConverter;
 
 public class FieldSetMapperConverterImpl<T> implements FieldSetMapperConverter<T> {
 	@Override

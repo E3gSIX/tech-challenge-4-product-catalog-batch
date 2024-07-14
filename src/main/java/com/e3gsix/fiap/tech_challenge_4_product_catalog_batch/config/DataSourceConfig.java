@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.config;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.config;
 
 import java.sql.Connection;
 import java.sql.SQLException;

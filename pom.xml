@@ -11,7 +11,7 @@
 	<groupId>com.e3gsix.fiap</groupId>
 	<artifactId>tech-challenge-4-clientes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tech-challenge-4-clientes</name>
+	<name>tech-challenge-4-product-catalog</name>
 	<description>Spring project for FIAP Tech Challenge by E3gSIX</description>
 	<url/>
 	<licenses>

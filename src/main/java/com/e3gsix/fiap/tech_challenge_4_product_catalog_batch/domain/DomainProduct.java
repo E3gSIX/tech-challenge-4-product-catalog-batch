@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.domain;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain;
 
 import java.time.LocalDateTime;
 

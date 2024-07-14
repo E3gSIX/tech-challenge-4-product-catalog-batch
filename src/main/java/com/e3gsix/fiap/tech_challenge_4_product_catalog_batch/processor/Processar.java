@@ -1,9 +1,9 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.processor;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.processor;
 
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.context.annotation.Configuration;
 
-import com.e3gsix.fiap.tech_challenge_4_clientes.domain.DomainProduct;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
 
 @Configuration
 public class Processar implements ItemProcessor<DomainProduct, DomainProduct> {

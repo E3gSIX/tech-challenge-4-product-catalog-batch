@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.reader;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.reader;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
-import com.e3gsix.fiap.tech_challenge_4_clientes.domain.DomainProduct;
-import com.e3gsix.fiap.tech_challenge_4_clientes.mapper.FieldSetMapperConverter;
-import com.e3gsix.fiap.tech_challenge_4_clientes.mapper.impl.FieldSetMapperConverterImpl;
+
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.mapper.FieldSetMapperConverter;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.mapper.impl.FieldSetMapperConverterImpl;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration

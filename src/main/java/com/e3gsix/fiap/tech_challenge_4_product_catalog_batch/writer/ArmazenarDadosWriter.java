@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.writer;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.writer;
 
 import javax.sql.DataSource;
 
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.e3gsix.fiap.tech_challenge_4_clientes.domain.DomainProduct;
+import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
 
 @Configuration
 @EnableTransactionManagement

@@ -1,4 +1,4 @@
-package com.e3gsix.fiap.tech_challenge_4_clientes.service;
+package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.service;
 
 import java.nio.file.*;
 import org.springframework.batch.core.Job;
