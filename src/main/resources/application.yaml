@@ -7,13 +7,13 @@ spring:
     password: admin123!
     driver-class-name: org.postgresql.Driver
   data:
-    #mongodb:
-    #uri: ${MONGODB_URL}
-    #database: ${MONGODB_DATABASE}
-    #username: ${MONGODB_USERNAME} 
-    #password: ${MONGODB_PASSWORD} 
     mongodb:
-       uri: mongodb://localhost:27017/products_db
+      uri: ${MONGODB_URL:mongodb://localhost:27017/products_db}
+      database: ${MONGODB_DATABASE:products_db}
+      username: ${MONGODB_USERNAME:squad}
+      password: ${MONGODB_PASSWORD:12345}
+    #mongodb:
+      #uri: mongodb://localhost:27017/products_db
     
   jpa:
     hibernate:

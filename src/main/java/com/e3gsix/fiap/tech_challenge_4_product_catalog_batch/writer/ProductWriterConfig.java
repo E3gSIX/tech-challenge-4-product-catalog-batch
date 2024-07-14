@@ -13,16 +13,6 @@ import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProdu
 @EnableTransactionManagement
 public class ProductWriterConfig {
 
-//    @Bean
-//    public ItemWriter<DomainProduct> itemWriter(DataSource dataSource) {
-//        return new JdbcBatchItemWriterBuilder<DomainProduct>()
-//                .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-//                .dataSource(dataSource)
-//                .sql("INSERT INTO domainproduct (code, description, price, quantity) VALUES (:code, :description, :price, :quantity)")
-//                .build();
-//    }
-    
-    
     @Bean
     public ItemWriter<DomainProduct> itemWriter(MongoTemplate mongoTemplate) {
         MongoItemWriter<DomainProduct> writer = new MongoItemWriter<>();
