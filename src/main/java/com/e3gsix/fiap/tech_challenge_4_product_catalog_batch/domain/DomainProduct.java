@@ -10,9 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class DomainProduct {
-    private int code;
+
+    private String name;
     private String description;
     private double price;
+    private String type;
     private int quantity;
     private LocalDateTime dateInclusion;
 }

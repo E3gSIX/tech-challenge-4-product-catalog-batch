@@ -22,14 +22,17 @@ class ProductProcessor implements ItemProcessor<DomainProduct, DomainProduct> {
     public DomainProduct process(DomainProduct item) throws Exception {
         StringBuilder errorMessages = new StringBuilder();
 
-        if (item.getCode() == 0) {
-            errorMessages.append("Code cannot be zero; ");
+        if (item.getName() == null || item.getName().isEmpty()) {
+            errorMessages.append("Name cannot be null or empty; ");
         }
         if (item.getDescription() == null || item.getDescription().isEmpty()) {
             errorMessages.append("Description cannot be null or empty; ");
         }
         if (item.getPrice() <= 0) {
             errorMessages.append("Price must be greater than zero; ");
+        }
+        if (item.getType() == null || item.getType().isEmpty()) {
+            errorMessages.append("Type cannot be null or empty; ");
         }
         if (item.getQuantity() < 0) {
             errorMessages.append("Quantity cannot be negative; ");
@@ -39,11 +42,11 @@ class ProductProcessor implements ItemProcessor<DomainProduct, DomainProduct> {
         }
 
         if (errorMessages.length() > 0) {
-            FileUtil.writeToFile(ERROR_FILE, "Code: " + item.getCode() + ", Description: " + item.getDescription() + ", Errors: " + errorMessages.toString());
+            FileUtil.writeToFile(ERROR_FILE, "Nme: " + item.getName() + ", Description: " + item.getDescription() + ", Errors: " + errorMessages.toString());
             return null;
         }
 
-        System.out.println("Processing: " + item.getCode() + " " + item.getDescription());
+        System.out.println("Processing: " + item.getName() + " " + item.getDescription()+ " " + item.getPrice()+ " " + item.getType()+ " " + item.getQuantity()+ " " + item.getDateInclusion());
         return item;
     }
 }

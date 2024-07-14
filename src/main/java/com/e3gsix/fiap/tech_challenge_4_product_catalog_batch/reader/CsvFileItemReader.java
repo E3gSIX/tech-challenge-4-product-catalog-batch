@@ -1,6 +1,8 @@
 package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.reader;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,15 +39,19 @@ public class CsvFileItemReader {
 
         File file = new File(csvFileName);
         if (!verifyAndCreateFile(file)) {
-            return emptyItemReader();
+            // If the file does not exist, create a new file named "exemplo.csv"
+            file = new File(desktopDir.toFile(), "exemplo.csv");
+            if (!verifyAndCreateFile(file)) {
+                return emptyItemReader();
+            }
         }
 
-        log.info("CSV File Path: " + csvFileName);
+        log.info("CSV File Path: " + file.getAbsolutePath());
         return new FlatFileItemReaderBuilder<DomainProduct>()
                 .name("reader")
-                .resource(new FileSystemResource(csvFileName))
+                .resource(new FileSystemResource(file))
                 .delimited()
-                .names(new String[]{"code", "description", "price", "quantity"})
+                .names(new String[]{"name", "description", "price", "type", "quantity"})
                 .fieldSetMapper(converter.convertFieldMapper(DomainProduct.class))
                 .linesToSkip(1)
                 .build();
@@ -73,17 +79,25 @@ public class CsvFileItemReader {
 
     private boolean verifyAndCreateFile(File file) {
         if (!file.exists()) {
-            log.warn("Input resource does not exist: " + csvFileName + ". Creating an empty file.");
+            log.warn("Input resource does not exist: " + file.getAbsolutePath() + ". Creating an empty file.");
             try {
                 if (file.createNewFile()) {
-                    log.info("Empty file created: " + csvFileName);
+                    log.info("Empty file created: " + file.getAbsolutePath());
+                    // Write the header to the new file
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+                        writer.write("name,description,price,type,quantity");
+                        writer.newLine();
+                    } catch (IOException e) {
+                        log.error("Error writing header to file: " + file.getAbsolutePath(), e);
+                        return false;
+                    }
                     return true;
                 } else {
-                    log.error("Failed to create empty file: " + csvFileName);
+                    log.error("Failed to create empty file: " + file.getAbsolutePath());
                     return false;
                 }
             } catch (IOException e) {
-                log.error("Error creating empty file: " + csvFileName, e);
+                log.error("Error creating empty file: " + file.getAbsolutePath(), e);
                 return false;
             }
         }
