@@ -24,7 +24,6 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
     @Override
     public void beforeJob(JobExecution jobExecution) {
-      
     }
 
     @Override
@@ -37,12 +36,12 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
                     Files.createDirectories(Paths.get(processedDir));
                 }
                 Files.move(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
-                log.info("Arquivo movido para: " + targetPath.toString());
+                log.info("File moved to: " + targetPath.toString());
             } else {
-                log.warn("Arquivo não encontrado após o job: " + filePath);
+                log.warn("File moved to: " + filePath);
             }
         } catch (Exception e) {
-            log.error("Erro ao mover o arquivo: " + e.getMessage());
+            log.error("Error moving file: " + e.getMessage());
         }
     }
 }

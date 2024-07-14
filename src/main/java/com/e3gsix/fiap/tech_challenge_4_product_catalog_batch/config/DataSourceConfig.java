@@ -18,23 +18,23 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DataSourceConfig {
 
-	@Primary
-	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource")
-	public DataSource springDataSource() {
-		return DataSourceBuilder.create().build();
-	}
+    @Primary
+    @Bean
+    @ConfigurationProperties(prefix = "spring.datasource")
+    public DataSource springDataSource() {
+        return DataSourceBuilder.create().build();
+    }
 
-	@PostConstruct
-	public void validateDataSource() {
-		testDatabaseConnection();
-	}
+    @PostConstruct
+    public void validateDataSource() {
+        testDatabaseConnection();
+    }
 
-	private void testDatabaseConnection() {
-		try (Connection connection = springDataSource().getConnection()) {
-			log.info("Conexão com o banco de dados estabelecida com sucesso!");
-		} catch (SQLException e) {
-			log.error("Falha ao estabelecer conexão com o banco de dados: " + e.getMessage());
-		}
-	}
+    private void testDatabaseConnection() {
+        try (Connection connection = springDataSource().getConnection()) {
+            log.info("Connection to the database successfully established!");
+        } catch (SQLException e) {
+            log.error("Failed to establish connection to the database: " + e.getMessage());
+        }
+    }
 }

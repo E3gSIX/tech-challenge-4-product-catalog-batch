@@ -13,12 +13,12 @@ import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.listener.JobComple
 @Configuration
 public class JobConfig {
 
-	@Bean
-	public Job job(Step step, JobRepository jobRepository, JobCompletionNotificationListener listener) {
-		return new JobBuilder("job", jobRepository)
-				.incrementer(new RunIdIncrementer())
-				.listener(listener)
-				.start(step)
-				.build();
-	}
+    @Bean
+    public Job job(Step step, JobRepository jobRepository, JobCompletionNotificationListener listener) {
+        return new JobBuilder("job", jobRepository)
+                .incrementer(new RunIdIncrementer())
+                .listener(listener)
+                .start(step)
+                .build();
+    }
 }

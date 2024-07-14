@@ -1,13 +1,16 @@
 package com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.service;
 
 import java.nio.file.*;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 import lombok.extern.slf4j.Slf4j;
+
 import javax.annotation.PostConstruct;
 
 @Service
