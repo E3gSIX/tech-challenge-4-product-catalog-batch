@@ -38,8 +38,9 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
                 Files.move(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
                 log.info("File moved to: " + targetPath.toString());
             } else {
-                log.warn("File moved to: " + filePath);
+                log.warn("File not found after job: " + filePath);
             }
+            jobExecution.getStatus();
         } catch (Exception e) {
             log.error("Error moving file: " + e.getMessage());
         }

@@ -5,16 +5,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.domain.DomainProduct;
 import com.e3gsix.fiap.tech_challenge_4_product_catalog_batch.util.FileUtil;
+
+import lombok.extern.slf4j.Slf4j;
+
 import java.time.LocalDateTime;
 
 @Configuration
+
 public class ProductProcessorConfig {
     @Bean
     public ItemProcessor<DomainProduct, DomainProduct> itemProcessor() {
         return new ProductProcessor();
     }
 }
-
+@Slf4j
 class ProductProcessor implements ItemProcessor<DomainProduct, DomainProduct> {
     private static final String ERROR_FILE = "invalid_records.txt";
 
@@ -45,8 +49,7 @@ class ProductProcessor implements ItemProcessor<DomainProduct, DomainProduct> {
             FileUtil.writeToFile(ERROR_FILE, "Nme: " + item.getName() + ", Description: " + item.getDescription() + ", Errors: " + errorMessages.toString());
             return null;
         }
-
-        System.out.println("Processing: " + item.getName() + " " + item.getDescription()+ " " + item.getPrice()+ " " + item.getType()+ " " + item.getQuantity()+ " " + item.getDateInclusion());
+        log.info ("Processing: " + item.getName() + " " + item.getDescription()+ " " + item.getPrice()+ " " + item.getType()+ " " + item.getQuantity()+ " " + item.getDateInclusion());
         return item;
     }
 }
