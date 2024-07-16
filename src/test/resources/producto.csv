@@ -1,0 +1,50 @@
+name		,description 		,price		,type		,quantity
+SmartPhone 	,ASUS Zenfone 8		,2500		,Plus		,5
+SmartPhone 	,ASUS Zenfone 8 Flip,2000		,Plus		,7
+SmartPhone 	,ASUS ROG Phone 5	,1500		,Plus		,10
+SmartPhone 	,ASUS ROG Phone 5s	,2500		,Plus		,5
+SmartPhone 	,Infinix Zero 5G	,2000		,Plus		,7
+SmartPhone 	,Legion Phone Duel	,1500		,Plus		,10
+SmartPhone 	,Nokia G50			,2500		,Plus		,5
+SmartPhone 	,realme GT Master	,2000		,Plus		,7
+SmartPhone 	,realme GT 2 Pro	,1500		,Plus		,10
+SmartPhone 	,realme 9 Pro Plus	,2500		,Plus		,5
+SmartPhone 	,TCL 20 Pro 5G		,2000		,Plus		,7
+SmartPhone 	,Mi 11 Lite 5G		,1500		,Plus		,10
+SmartPhone 	,Xiaomi 12			,2500		,Plus		,5
+SmartPhone 	,Xiaomi 12 Lite		,2000		,Plus		,7
+SmartPhone 	,POCO M3 Pro 5G		,1500		,Plus		,10
+SmartPhone 	,POCO M4 Pro 5G		,2500		,Plus		,5
+SmartPhone 	,POCO X4 Pro 5G		,2000		,Plus		,7
+SmartPhone 	,Redmi Note 10 5G	,1500		,Plus		,10
+SmartPhone 	,Redmi Note 11 Pro5G,2500		,Plus		,5
+SmartPhone 	,Moto G 5G Plus		,2000		,Plus		,7
+SmartPhone 	,Moto G50 5G		,1500		,Plus		,10
+SmartPhone 	,Moto G71 5G		,2500		,Plus		,5
+SmartPhone 	,Moto G82 5G		,2000		,Plus		,7
+SmartPhone 	,Moto G100			,1500		,Plus		,10
+SmartPhone 	,Moto G200 5G		,2500		,Plus		,5
+SmartPhone 	,Motorola Edge		,2000		,Plus		,7
+SmartPhone 	,Motorola Edge 20	,1500		,Plus		,10
+SmartPhone 	,Motorola Edge 30Pro,2500		,Plus		,5
+SmartPhone 	,Moto G62 5G		,2000		,Plus		,7
+SmartPhone 	,Galaxy S22 Ultra	,1500		,Plus		,10
+SmartPhone 	,Galaxy S21 Ultra	,2500		,Plus		,5
+SmartPhone 	,Galaxy S21 FE 5G	,2000		,Plus		,7
+SmartPhone 	,Galaxy S20 FE 5G	,1500		,Plus		,10
+SmartPhone 	,Galaxy A22 5G		,2500		,Plus		,5
+SmartPhone 	,Galaxy A13 5G		,2000		,Plus		,7
+SmartPhone 	,Galaxy M23			,1500		,Plus		,10
+SmartPhone 	,Galaxy M52 5G		,2500		,Plus		,5
+SmartPhone 	,Galaxy Z Fold 		,2000		,Plus		,7
+SmartPhone 	,Galaxy Z Fold 2	,1500		,Plus		,10
+SmartPhone 	,Galaxy Note 20 5G	,2500		,Plus		,5
+SmartPhone 	,iPhoneSE(3ªgeração),2000		,Plus		,7
+SmartPhone 	,iPhone 13			,1500		,Plus		,10
+SmartPhone 	,iPhone 13 mini		,2500		,Plus		,5
+SmartPhone 	,iPhone 13 Pro		,2000		,Plus		,7
+SmartPhone 	,iPhone 13 Pro Max	,1500		,Plus		,10
+SmartPhone 	,iPhone 12			,2500		,Plus		,5
+SmartPhone 	,iPhone 12 mini		,2000		,Plus		,7
+SmartPhone 	,iPhone 12 Pro		,1500		,Plus		,10
+SmartPhone 	,iPhone 12 Pro Max	,2500		,Plus		,5

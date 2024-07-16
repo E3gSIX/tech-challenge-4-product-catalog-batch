@@ -1,0 +1,7 @@
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
+Nme: , Description: , Errors: Name cannot be null or empty; Description cannot be null or empty; Price must be greater than zero; Type cannot be null or empty; Quantity cannot be negative; 
