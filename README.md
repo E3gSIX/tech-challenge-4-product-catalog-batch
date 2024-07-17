@@ -1,1 +1,1 @@
-# product-catalog-batch
+# Tech Challenge 4 - Product Catalog [Batch]
